@@ -78,10 +78,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## Instalar o projeto
 
-1 - cd abapp 
+## Instalar o projeto
+1 - cd abapp
 2 - composer install
-3 - npm install && npm run dev 
+3 - npm install && npm run dev
 4 - configurar .env credenciais do banco de dados
 5 - php artisan serve
