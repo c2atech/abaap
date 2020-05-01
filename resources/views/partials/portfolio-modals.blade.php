@@ -8,19 +8,14 @@
               <div class="rl"></div>
             </div>
           </div>
+          @foreach($posts as $post)
           <div class="container">
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  @foreach($posts as $post)
-
-
-
-
-
                   <h2 class="text-uppercase">
-      {{$post->titulo}}
+             {{$post->titulo}}
                   </h2>
                   <p class="item-intro text-muted">  {{$post->descricao}}</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
