@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/Posts', 'PostController@index');
 
+Route::get('/', ['uses'=>'PostController@index', 'as' => 'contact.index']);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

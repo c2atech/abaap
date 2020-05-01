@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('descricao');
             $table->string('texto');
             $table->string('autor');
+            $table->string('tipo');
             $table->string('image-url');
             $table->timestamps();
         });

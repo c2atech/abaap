@@ -1,3 +1,12 @@
+
+
+@foreach($posts as $post)
+
+  <li>
+      {{$post->titulo}}
+  </li>
+
+@endforeach
 <!-- Contact -->
     <section id="contact">
       <div class="container">
