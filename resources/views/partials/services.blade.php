@@ -1,37 +1,43 @@
     <!-- Services -->
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">E-Commerce</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Responsive Design</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Web Security</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
+  <section class="page-section" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Galeria de fotos</h2>
+          <h3 class="section-subheading text-muted">Confira abaixo algumas de nossas fotos dos nossas ações sociais.</h3>
         </div>
       </div>
-    </section>
+      <div class="row text-center">
+        <div class="card-deck">
+
+          <div class="card mb-4">
+            <!--  img-fluid dentro da class da imagem para ficar responsivo-->
+              <img class="card-img-top" height="270px" src="#" alt="Card image cap">
+              <div class="card-body">
+                  <h4 class="card-title">Entrega de cestas básicas</h4>
+                  <p class="card-text">Fotos das entregas de cestas básicas para a população.</p>
+                  <a href="#" class="card-text"><small class="text-muted">Clique aqui.</small></a>
+              </div>
+          </div>
+
+          <div class="card mb-4">
+            <img class="card-img-top" height="270px" src="#" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Copa Guilherme Beneficente</h4>
+                <p class="card-text">Confira as fotos desse evento esportivo que vem crescendo a cada ano.</p>
+                <a href="#" class="card-text"><small class="text-muted">Clique aqui.</small></a>
+            </div>
+        </div>
+
+         <div class="card mb-4">
+              <img class="card-img-top" height="270px" src="#" alt="Card image cap">
+              <div class="card-body">
+                  <h4 class="card-title">Entrega de materiais escolares</h4>
+                  <p class="card-text">Registros das entregas de materiais escolares para as crianças.</p>
+                  <a href="#" class="card-text"><small class="text-muted">Clique aqui.</small></a>
+              </div>
+          </div>
+
+      </div>
+    </div>
+  </section>

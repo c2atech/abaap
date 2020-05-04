@@ -7,8 +7,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Portfolio</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Projetos</h2>
+            <h3 class="section-subheading text-muted">Confira os nosso projetos realizados até hoje.</h3>
           </div>
         </div>
         <div class="row">
