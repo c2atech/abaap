@@ -18,21 +18,21 @@
     <div class="carousel-item active">
       <img class="d-block w-100" src="assoc/portfolio/embreve.png" alt="Notícia 1">
       <div class="carousel-caption d-none d-md-block">
-    <h5>Titulo da noticia</h5>
+    <a href="#"><h5>Titulo da noticia</h5></a>
     <p>subtitulo</p>
   </div>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="assoc/portfolio/embreve.png" alt="Notícia 2">
       <div class="carousel-caption d-none d-md-block">
-      <h5>Titulo da noticia 2</h5>
+      <a href="#"><h5>Titulo da noticia 2</h5></a>
     <p>subtitulo 2</p>
     </div>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="assoc/portfolio/embreve.png" alt="Notícia 3">
       <div class="carousel-caption d-none d-md-block">
-      <h5>Titulo da noticia 3</h5>
+      <a href="#"><h5>Titulo da noticia 3</h5></a>
     <p>subtitulo 3</p>
     </div>
     </div>
@@ -46,7 +46,44 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-     
+
+  </br>  
+
+<div class="card-deck">
+  <div class="card">
+    <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
+    <div class="card-body">
+    <a href="#"><h5 class="card-title">Noticia 4</h5></a>
+      <p class="card-text">Descriçao da noticia.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
+    <div class="card-body">
+    <a href="#"><h5 class="card-title">Noticia 5</h5></a>
+      <p class="card-text">Descriçao da noticia.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <a href="#"><h5 class="card-title">Noticia 6</h5></a>
+      <p class="card-text">Descriçao da noticia.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+
       </div>
+
+      
     
   </section>

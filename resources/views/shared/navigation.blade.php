@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#noticias">Noticias</a>
+              <a class="nav-link js-scroll-trigger" href="#noticias">Notícias</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#services">Galeria</a>
@@ -19,7 +19,8 @@
               <a class="nav-link js-scroll-trigger" href="#portfolio">Projetos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">Quem somos</a>
+              
+              <a class="nav-link js-scroll-trigger" href="#about">Quem somos?</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#team">Diretoria</a>
