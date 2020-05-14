@@ -1,3 +1,7 @@
+@push('doc_end')
+  @include("partials.conteudo-noticia")
+@endpush
+
     <!-- Noticias -->
     <section class="page-section" id="noticias">
     <div class="container">
@@ -18,7 +22,8 @@
     <div class="carousel-item active">
       <img class="d-block w-100" src="assoc/portfolio/embreve.png" alt="Notícia 1">
       <div class="carousel-caption d-none d-md-block">
-    <a href="conteudo-noticia.blade.php"><h5>Titulo da noticia</h5></a>
+    
+    <a class="portfolio-link" data-toggle="modal" href="#noticia1"> <h5>Titulo</h5></a>
     <p>subtitulo</p>
   </div>
     </div>
