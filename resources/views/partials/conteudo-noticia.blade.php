@@ -11,6 +11,13 @@
        auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing</p>
 
        <h4> Lorem ipsum </h4>
-   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, 
-       auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing</p>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+   Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing</p>
+
+   <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>.</p>
+      <footer class="blockquote-footer">Autor: <cite title="Título da fonte">Categoria</cite></footer>
+    </blockquote>
+  </div>
 </div>
