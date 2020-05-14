@@ -9,6 +9,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#noticias">Noticias</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#services">Galeria</a>
             </li>
@@ -23,7 +26,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
-            </li>
+            </li> 
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="/login">Entrar</a>
             </li>

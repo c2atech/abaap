@@ -1,6 +1,8 @@
 @extends("layout")
 
 @section('content')
+    
+    @include("partials.noticias")
 
     @include("partials.services")
 
