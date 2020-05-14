@@ -18,7 +18,7 @@
     <div class="carousel-item active">
       <img class="d-block w-100" src="assoc/portfolio/embreve.png" alt="Notícia 1">
       <div class="carousel-caption d-none d-md-block">
-    <a href="#"><h5>Titulo da noticia</h5></a>
+    <a href="conteudo-noticia.blade.php"><h5>Titulo da noticia</h5></a>
     <p>subtitulo</p>
   </div>
     </div>
