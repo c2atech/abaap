@@ -1,11 +1,15 @@
+@push('doc_end')
+@include("partials.doacao-modal")
+@endpush
+
 <!-- About -->
     <section id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Quem somos</h2>
-            <h3 class="section-subheading text-muted">ABAPP- Uma sociedade sem fins lucrativos, que se transformou
-            em um grande projeto de amor, que une pessoas e transformam vidas.
+            <h3 class="section-subheading text-muted"><p>ABAPP- Uma sociedade sem fins lucrativos, que se transformou
+            em um grande projeto de amor, que une pessoas e transformam vidas.</p>
            <p> Nosso trabalho é realizado com seriedade, e pensando nisso, desenvolvemos vários projetos de assistência e 
             responsabilidade social, que já beneficiou várias famílias no nosso município. 
             Além do mais, atuamos de forma responsável, sempre com muito amor e zelo para com aqueles que dependem de nossa
@@ -76,10 +80,10 @@
               </li>
               <li class="timeline-inverted">
                 <div class="timeline-image">
-                <a class="portfolio-link" data-toggle="modal" href="#exampleModal"><h4>Ajude-nos.
-                  <br>Doe
-                  <br>Aqui!</h4>
-                </div>
+                <a class="portfolio-link" data-toggle="modal" href="#doacao"><h4>Ajude-nos.
+                  <br>Saiba
+                  <br>Mais</h4>
+                 </div>
                 </a>
               </li>
             </ul>

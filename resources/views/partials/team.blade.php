@@ -15,12 +15,12 @@
               <p class="text-muted">Presidente</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.facebook.com/profile.php?id=100007584371968" target="_blank">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.instagram.com/guilherme20costa/?hl=pt-br" target="_blank">
                   <i class="fa fa-instagram"></i>
                   </a>
                   
@@ -36,12 +36,12 @@
               <p class="text-muted">Vice-Presidente</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.facebook.com/erik.camposlopes" target="_blank">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.instagram.com/_erikcampos/?hl=pt-br" target="_blank">
                   <i class="fa fa-instagram"></i>
                   </a>
                   
@@ -57,12 +57,13 @@
               <p class="text-muted">1º Tesoureiro</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.facebook.com/marcosviniciusarraesabreu.arraes" target="_blank">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.instagram.com/marcosaraujofc/?hl=pt-br" target="_blank">
+
                   <i class="fa fa-instagram"></i>
                   </a>
                   
@@ -81,12 +82,12 @@
               <p class="text-muted">2º Tesoureiro</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.facebook.com/igorlucas.lucasbarbosa" target="_blank">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.instagram.com/igorloliveiraa/?igshid=j3i0ryfcrulr" target="_blank">
                   <i class="fa fa-instagram"></i>
                   </a>
                   
@@ -102,10 +103,11 @@
               <p class="text-muted">1º Secretário</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
+               
+                <a href="https://www.facebook.com/drmateus.silva.1" target="_blank">
+                <i class="fa fa-facebook"></i>
+              </li>
+                </a>
                 <li class="list-inline-item">
                 <a href="#">
                   <i class="fa fa-instagram"></i>
@@ -123,12 +125,12 @@
               <p class="text-muted">2º Secretário</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.facebook.com/jhonnzinhow" target="_blank">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.instagram.com/jhondowglas/?igshid=1xwjt14kp7ujc" target="_blank">
                   <i class="fa fa-instagram"></i>
                   </a>
                   
