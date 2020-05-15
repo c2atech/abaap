@@ -15,20 +15,17 @@
               <p class="text-muted">Presidente</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
+                <a href="#">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
                   </a>
+                  
                 </li>
+              
               </ul>
             </div>
           </div>
@@ -39,20 +36,17 @@
               <p class="text-muted">Vice-Presidente</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
+                <a href="#">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
                   </a>
+                  
                 </li>
+              
               </ul>
             </div>
           </div>
@@ -63,20 +57,17 @@
               <p class="text-muted">1º Tesoureiro</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
+                <a href="#">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
                   </a>
+                  
                 </li>
+              
               </ul>
             </div>
           </div>
@@ -90,20 +81,17 @@
               <p class="text-muted">2º Tesoureiro</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
+                <a href="#">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
                   </a>
+                  
                 </li>
+              
               </ul>
             </div>
           </div>
@@ -114,20 +102,17 @@
               <p class="text-muted">1º Secretário</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
+                <a href="#">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
                   </a>
+                  
                 </li>
+              
               </ul>
             </div>
           </div>
@@ -138,20 +123,17 @@
               <p class="text-muted">2º Secretário</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
+                <a href="#">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
                   </a>
+                  
                 </li>
+              
               </ul>
             </div>
           </div>
