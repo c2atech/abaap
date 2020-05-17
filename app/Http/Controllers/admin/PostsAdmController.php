@@ -1,20 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\models\Post;
 
-
-class PostController extends Controller
+class PostsAdmController extends Controller
 {
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
+  
     private $post;
 
     public function __construct(Post $post) {
@@ -24,15 +18,13 @@ class PostController extends Controller
     public function index()
     {
         $posts = $this->post->paginate(8);
-        return view('/welcome', compact('posts'));
+        return view('admin.Posts.index', compact('posts'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    
     public function create()
     {
         //

@@ -1,7 +1,6 @@
 @push('doc_end')
 @include("partials.conteudo-noticia")
 @endpush
-
 <!-- Noticias -->
 <section class="page-section" id="noticias">
   <div class="container">
@@ -12,87 +11,36 @@
       </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3">
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
-      <div class="card-body">
-      <a class="portfolio-link" data-toggle="modal" href="#noticia1"><h5 class="card-title">Noticia 1</h5></a>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-    </div>
-  </div>
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
-      <div class="card-body">
-      <a href="#"><h5 class="card-title">Noticia 2</h5></a>
-        <p class="card-text">This is a short card.</p>
-      </div>
-      <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-    </div>
-  </div>
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
-      <div class="card-body">
-      <a href="#"><h5 class="card-title">Noticia 3</h5></a>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-    </div>
-  </div>
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
-      <div class="card-body">
-      <a href="#"><h5 class="card-title">Noticia 4</h5></a>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-    </div>
-  </div>
+    @foreach ($posts as $post)
+    <div class="container">
+    <ul class="card-newS">
+      <li>
+          <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <a class="portfolio-link" data-toggle="modal" href="#noticia1">
+                    <h5 class="card-title">
+                      {{$post->titulo}}
+                    </h5>
+                  </a>
+                  <p class="card-text">{{$post->descricao}}</p>
+                </div>
+                <div class="card-footer">
+                      <small class="text-muted">Enviado em {{$post->created_at}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    @endforeach
 
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
-      <div class="card-body">
-      <a href="#"><h5 class="card-title">Noticia 5</h5></a>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-    </div>
-  </div>
-
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
-      <div class="card-body">
-      <a href="#"><h5 class="card-title">Noticia 6</h5></a>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-    </div>
-  </div>
-</div>
-
-
-      </div>
-    
-
-
-
+    <div class="container justify-content-center">
+      <a href="">
+                    {{$posts->links()}}
+                    
+                    </div>
 </section>

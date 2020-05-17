@@ -30,7 +30,7 @@
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-              Desenvolvido por <a href="#"><b>C2A Tech&reg;</b></a>
+              Desenvolvido por <a href="www.c2atech.com.br"><b>C2A Tech&reg;</b></a>
               </li>
             </ul>
           </div>

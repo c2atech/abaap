@@ -15047,13 +15047,13 @@ body {
 p {
   line-height: 1.75;
 }
-   /* links */
+
 a {
-  color: #022409;
+  color: #fed136;
 }
 
 a:hover {
-  color: #018a01;
+  color: #fec503;
 }
 
 .text-primary {
@@ -15106,15 +15106,15 @@ section h3.section-subheading {
 }
 
 .btn-primary {
-  background-color: #fff;  /* cor do botao */
-  border-color:#022409;
+  background-color: #fed136;
+  border-color: #fed136;
 }
 
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover {
-  background-color: #022409 !important;   /*cor do botao ao ser pressionado */
-  border-color: #fff !important;
+  background-color: #fec810 !important;
+  border-color: #fec810 !important;
   color: white;
 }
 
@@ -15188,7 +15188,7 @@ body {
 
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #32CD32;
+  color: #fed136;
 }
 
 @media (min-width: 992px) {
@@ -15226,7 +15226,7 @@ body {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url(/images/header-bg.jpg);
+  background-image: url(/images/capa.jpeg?9f3c1cd054a59c493ffb820fc5cf870a);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -15302,7 +15302,7 @@ header.masthead .intro-text .intro-heading {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  background: #022409;
+  background: rgba(254, 209, 54, 0.9);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
@@ -15505,7 +15505,7 @@ header.masthead .intro-text .intro-heading {
   color: white;
   border: 7px solid #e9ecef;
   border-radius: 100%;
-  background-color: #d4d2cb;
+  background-color: #fed136;
 }
 
 .timeline > li .timeline-image h4 {
