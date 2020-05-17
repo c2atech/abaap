@@ -43,9 +43,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <div mb-3>
-                            <li><a href="{{route('posts')}}">Postagens</a></li>
-                        </div>
+                       
 
                         <!-- Authentication Links -->
                         @guest
@@ -59,6 +57,9 @@
                         @endif
                         @else
                         <li class="nav-item dropdown">
+                        <div mb-3>
+                            <li><a href="{{route('posts')}}">Postagens</a></li>
+                        </div>
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
