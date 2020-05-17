@@ -38,7 +38,18 @@ class PostsAdmController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $post = $this->post;
+        $post->imageurl = $data['imageurl'];
+        $post->titulo = $data['titulo'];
+        $post->subtitulo = $data['subtitulo'];
+        $post->descricao = $data['descricao'];
+        $post->texto = $data['texto'];
+        $post->autor = $data['autor'];
+        $post->tipo = $data['tipo'];
+
+        $post->save();
     }
 
     /**

@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,8 +34,6 @@
 
         .table-title {
             padding-bottom: 15px;
-            background: #435d7d;
-            color: #fff;
             padding: 16px 30px;
             margin: -20px -25px 10px;
             border-radius: 3px 3px 0 0;
@@ -310,7 +311,7 @@
     </script>
 </head>
 
-<body >
+<body>
     <div class="container sm-12 md-6">
         <div class="table-wrapper">
             <div class="table-title">
@@ -319,7 +320,7 @@
                         <h2>Lista de <b>posts </b></h2>
                     </div>
                     <div class="col-sm-6">
-                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
+                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Criar novo Post</span></a>
                         <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
                     </div>
                 </div>
@@ -327,17 +328,11 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>
-                            <span class="custom-checkbox">
-                                <input type="checkbox" id="selectAll">
-                                <label for="selectAll"></label>
-                            </span>
-                        </th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Address</th>
-                        <th>Phone</th>
-                        <th>Actions</th>
+
+                        <th>ID</th>
+                        <th>TITULO</th>
+                        <th>DESCRIÇÃO</th>
+                        <th>CRIAÇÃO</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -363,100 +358,118 @@
                 </tbody>
             </table>
             <div class="clearfix">
-            {{$posts->links()}}
-        </div>
-    </div>
-    <!-- Edit Modal HTML -->
-    <div id="addEmployeeModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form>
-                    <div class="modal-header">
-                        <h4 class="modal-title">Add Employee</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Address</label>
-                            <textarea class="form-control" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                        <input type="submit" class="btn btn-success" value="Add">
-                    </div>
-                </form>
+                {{$posts->links()}}
             </div>
         </div>
-    </div>
-    <!-- Edit Modal HTML -->
-    <div id="editEmployeeModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form>
-                    <div class="modal-header">
-                        <h4 class="modal-title">Edit Employee</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" class="form-control" required>
+        <!-- Edit Modal HTML -->
+        <div id="addEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="{{route('posts.create')}}" method="POST">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Criar novo post</h4>
+                            @csrf
                         </div>
+                        <div class="modal-body">
                         <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" class="form-control" required>
+                                <label>Titulo</label>
+                                <input type="text" class="form-control" name="imageurl" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Titulo</label>
+                                <input type="text" class="form-control" name="titulo" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Sub titulo</label>
+                                <input type="text" class="form-control" name="subtitulo" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Descrição</label>
+                                <textarea class="form-control" name="descricao" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Texto</label>
+                                <input type="text" class="form-control" name="texto" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Autor</label>
+                                <input type="text" class="form-control" name="autor" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Tipo</label>
+                                <input type="text" class="form-control" name="tipo" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Address</label>
-                            <textarea class="form-control" required></textarea>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Add">
                         </div>
-                        <div class="form-group">
-                            <label>Phone</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                        <input type="submit" class="btn btn-info" value="Save">
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Delete Modal HTML -->
-    <div id="deleteEmployeeModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form>
-                    <div class="modal-header">
-                        <h4 class="modal-title">Delete Employee</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Are you sure you want to delete these Records?</p>
-                        <p class="text-warning"><small>This action cannot be undone.</small></p>
-                    </div>
-                    <div class="modal-footer">
-                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                        <input type="submit" class="btn btn-danger" value="Delete">
-                    </div>
-                </form>
+        <!-- Edit Modal HTML -->
+        <div id="editEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h4 class="modal-title">Edit Employee</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>titulo</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Sub titulo</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Descrição</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Texto</label>
+                                <textarea class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Autor</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-info" value="Save">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+        <!-- Delete Modal HTML -->
+        <div id="deleteEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h4 class="modal-title">Delete Employee</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Are you sure you want to delete these Records?</p>
+                            <p class="text-warning"><small>This action cannot be undone.</small></p>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-danger" value="Delete">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
+@endsection

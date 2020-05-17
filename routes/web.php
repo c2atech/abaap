@@ -22,5 +22,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/posts', 'admin\PostsAdmController@index')->name('posts');
-Route::post ('/posts', 'admin\PostsAdmController@create')->name('posts.create');
+Route::post('/posts', 'admin\PostsAdmController@store')->name('posts.create');
 
