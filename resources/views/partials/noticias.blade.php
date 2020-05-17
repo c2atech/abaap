@@ -11,11 +11,11 @@
       </div>
     </div>
 
-    @foreach ($posts as $post)
-    <div class="container">
-    <ul class="card-newS">
-      <li>
+  
+    
+     
           <div class="row row-cols-1 row-cols-md-3">
+          @foreach ($posts as $post)
             <div class="col mb-4">
               <div class="card h-100">
                 <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
@@ -28,19 +28,21 @@
                   <p class="card-text">{{$post->descricao}}</p>
                 </div>
                 <div class="card-footer">
-                      <small class="text-muted">Enviado em {{$post->created_at}}</small>
+                  <small class="text-muted">Enviado em {{$post->created_at}}</small>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </li>
-    </ul>
+         
+    
+    
     @endforeach
+    </div>
 
     <div class="container justify-content-center">
       <a href="">
-                    {{$posts->links()}}
-                    
-                    </div>
+        {{$posts->links()}}
+
+    </div>
+
+  </div>
 </section>
