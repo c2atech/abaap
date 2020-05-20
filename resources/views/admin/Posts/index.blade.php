@@ -313,7 +313,7 @@
 
 <body>
     <div class="container sm-12 md-6">
-        <div class="table-wrapper">
+        <div class="table-wrapper container">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
@@ -325,7 +325,7 @@
                     </div>
                 </div>
             </div>
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover ">
                 <thead>
                     <tr>
 
@@ -340,20 +340,21 @@
                         @forelse($posts as $post)
                         <td>{{$post->id}}</td>
                         <td>
-                            {{$post->titulo}}
-                            </a>
+                                {{$post->titulo}}
                         </td>
                         <td>{{$post->descricao}}</td>
                         <td>{{$post->created_at}}</td>
-                        <td>
-                            <i class="fas fa-trash-alt"></i>
-                        </td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
                     @empty
+                    <tr>
+                        <td colspan="4">
+                            <h2>Nenhum Post encontrado</h2>
+                        </td>
+                    </tr>
                     @endforelse
                 </tbody>
             </table>
@@ -365,14 +366,14 @@
         <div id="addEmployeeModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form action="{{route('posts.create')}}" method="POST">
+                    <form action="{{route('posts.store')}}" method="POST">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <div class="modal-header">
                             <h4 class="modal-title">Criar novo post</h4>
                             @csrf
                         </div>
                         <div class="modal-body">
-                        <div class="form-group">
+                            <div class="form-group">
                                 <label>Titulo</label>
                                 <input type="text" class="form-control" name="imageurl" required>
                             </div>
@@ -413,36 +414,38 @@
         <div id="editEmployeeModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form>
+                    <form action="{{route('posts.update', ['post'=>$post->id])}}" method="post">
+                        @method("PUT")
+                        @csrf
                         <div class="modal-header">
-                            <h4 class="modal-title">Edit Employee</h4>
+                            <h4 class="modal-title">Editar postagem</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
                                 <label>titulo</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" class="form-control" required value="{{$post->id}}">
                             </div>
                             <div class="form-group">
                                 <label>Sub titulo</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" class="form-control" required value="{{$post->subtitulo}}">
                             </div>
                             <div class="form-group">
                                 <label>Descrição</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" class="form-control" required value="{{$post->descricao}}">
                             </div>
                             <div class="form-group">
                                 <label>Texto</label>
-                                <textarea class="form-control" required></textarea>
+                                <textarea class="form-control" required>{{$post->texto}}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>Autor</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" class="form-control" required value="{{$post->autor}}">
                             </div>
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-info" value="Save">
+                            <input type="submit" class="btn btn-info" value="atualizar">
                         </div>
                     </form>
                 </div>

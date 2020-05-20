@@ -23,10 +23,12 @@ class PostController extends Controller
     
     public function index()
     {
-        $posts = $this->post->paginate(8);
+        $posts=$this->post->orderBy('id', 'DESC')->paginate(6);
         return view('/welcome', compact('posts'));
-    }
+        return view('admin.Posts.index', compact('posts'));
 
+    }
+ 
     /**
      * Show the form for creating a new resource.
      *

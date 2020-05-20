@@ -15,7 +15,7 @@
     
      
           <div class="row row-cols-1 row-cols-md-3">
-          @foreach ($posts as $post)
+          @forelse ($posts as $post)
             <div class="col mb-4">
               <div class="card h-100">
                 <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
@@ -32,10 +32,10 @@
                 </div>
               </div>
             </div>
-         
+    @empty
+         <div>vazio</div>
     
-    
-    @endforeach
+    @endforelse
     </div>
 
     <div class="container justify-content-center">

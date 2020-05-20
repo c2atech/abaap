@@ -21,6 +21,7 @@ Route::get('/', ['uses'=>'PostController@index', 'as' => 'contact.index']);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/posts', 'admin\PostsAdmController@index')->name('posts');
-Route::post('/posts', 'admin\PostsAdmController@store')->name('posts.create');
-
+Route::resource('/posts', 'admin\PostsAdmController');
+//Route::post('/posts', 'admin\PostsAdmController@store')->name('posts.create');
+//Route::post('/posts/show', 'admin\PostsAdmController@show')->name('posts.show');
+//Route::put('/posts/update', 'admin\PostsAdmController@update')->name('posts.update');

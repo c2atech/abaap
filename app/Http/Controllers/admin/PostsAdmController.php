@@ -17,9 +17,10 @@ class PostsAdmController extends Controller
     
     public function index()
     {
-        $posts = $this->post->paginate(6);
+        $posts=$this->post->orderBy('id', 'DESC')->paginate(10);
         return view('admin.Posts.index', compact('posts'));
     }
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -27,7 +28,7 @@ class PostsAdmController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -38,18 +39,13 @@ class PostsAdmController extends Controller
      */
     public function store(Request $request)
     {
+
+        
         $data = $request->all();
 
-        $post = $this->post;
-        $post->imageurl = $data['imageurl'];
-        $post->titulo = $data['titulo'];
-        $post->subtitulo = $data['subtitulo'];
-        $post->descricao = $data['descricao'];
-        $post->texto = $data['texto'];
-        $post->autor = $data['autor'];
-        $post->tipo = $data['tipo'];
+        $post = $this->post->create($data);
+        return redirect('/posts');
 
-        $post->save();
     }
 
     /**
@@ -60,7 +56,13 @@ class PostsAdmController extends Controller
      */
     public function show($id)
     {
-        //
+
+    $posts=$this->post->paginate(6);
+
+    $post = $this->post->find($id);
+
+    return view('admin.Posts.index', compact('post'));
+    
     }
 
     /**
@@ -83,7 +85,10 @@ class PostsAdmController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $data = $request->all();
+        $post = $this->post->find($id);
+        $post->update($data);
     }
 
     /**
