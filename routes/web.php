@@ -22,5 +22,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/posts', 'admin\PostsAdmController@index')->name('posts');
-Route::post('/posts', 'admin\PostsAdmController@store')->name('posts.create');
+Route::post('/posts', 'admin\PostsAdmController@salvar')->name('posts.create');
+Route::get('/posts/{id}', 'admin\PostsAdmController@delete')->name('posts.delete');
+Route::put('/posts/{id}', 'admin\PostsAdmController@atualizar')->name('posts.atualizar');
+
+
 

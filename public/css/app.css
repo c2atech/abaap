@@ -6176,7 +6176,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #212529;
+  color: azure;
   background-color: #fed136;
   border-color: #fed136;
 }
@@ -15049,11 +15049,11 @@ p {
 }
 
 a {
-  color: #fed136;
+  color: rgb(2, 83, 2);
 }
 
 a:hover {
-  color: #fec503;
+  color: #189b07;
 }
 
 .text-primary {
@@ -15106,16 +15106,16 @@ section h3.section-subheading {
 }
 
 .btn-primary {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: rgb(2, 49, 2);
+  border-color: white;
 }
 
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover {
-  background-color: #fec810 !important;
-  border-color: #fec810 !important;
-  color: white;
+  background-color: white !important;
+  border-color: rgb(2, 49, 2) !important;
+  color: rgb(2, 49, 2);
 }
 
 .btn-primary:active,
@@ -15188,7 +15188,7 @@ body {
 
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fed136;
+  color: #32CD32;
 }
 
 @media (min-width: 992px) {
@@ -15226,7 +15226,7 @@ body {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url(/images/capa.jpeg?9f3c1cd054a59c493ffb820fc5cf870a);
+  background-image: url(/images/header-bg.jpg);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;

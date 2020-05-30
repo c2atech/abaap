@@ -317,11 +317,11 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2>Lista de <b>posts </b></h2>
+                        <h2>Lista de <b>Postagens </b></h2>
                     </div>
                     <div class="col-sm-6">
                         <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Criar novo Post</span></a>
-                        <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
+                        <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Excluir Post</span></a>
                     </div>
                 </div>
             </div>
@@ -329,21 +329,23 @@
                 <thead>
                     <tr>
 
-                        <th>ID</th>
-                        <th>TITULO</th>
-                        <th>DESCRIÇÃO</th>
-                        <th>CRIAÇÃO</th>
+                        <th>Título</th>
+                        <th>Subtítulo</th>
+                        <th>Descrição</th>
+                        <th>Imagem</th>
+                        <th>Criação</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         @forelse($posts as $post)
-                        <td>{{$post->id}}</td>
+                        <td>{{$post->titulo}}</td>
                         <td>
-                            {{$post->titulo}}
+                            {{$post->subtitulo}}
                             </a>
                         </td>
                         <td>{{$post->descricao}}</td>
+                        <td><img height="250" src="{{asset($post->imagem)}}" alt="{{$post->titulo}}"</></td>
                         <td>{{$post->created_at}}</td>
                         <td>
                             <i class="fas fa-trash-alt"></i>
@@ -361,21 +363,29 @@
                 {{$posts->links()}}
             </div>
         </div>
-        <!-- Edit Modal HTML -->
+        <!-- Create Modal HTML -->
         <div id="addEmployeeModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form action="{{route('posts.create')}}" method="POST">
+                    <form action="{{route('posts.create')}}" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <div class="modal-header">
                             <h4 class="modal-title">Criar novo post</h4>
                             @csrf
                         </div>
                         <div class="modal-body">
-                        <div class="form-group">
-                                <label>Titulo</label>
-                                <input type="text" class="form-control" name="imageurl" required>
-                            </div>
+                        <div class="file-field input-field">
+      <div class="btn blue">
+          <span>imagem</span>
+        <input type="file" name="imagem">
+      </div>
+
+      <div class="file-path-wrapper">
+           <input class="file-path validate" type="text">
+         </div>
+       </div>
+
+    
                             <div class="form-group">
                                 <label>Titulo</label>
                                 <input type="text" class="form-control" name="titulo" required>
@@ -413,31 +423,55 @@
         <div id="editEmployeeModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form>
+                <form action="{{route('posts.atualizar', $post->id)}}" method="post" enctype="multipart/form-data">
+                {{csrf_field()}}
+        <input type="hidden" name="_method" value="put">
                         <div class="modal-header">
-                            <h4 class="modal-title">Edit Employee</h4>
+                            <h4 class="modal-title">Editar Postagem</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
+
+                        <div class="file-field input-field">
+      <div class="btn blue">
+          <span>imagem</span>
+        <input type="file" name="imagem">
+      </div>
+
+      <div class="file-path-wrapper">
+           <input class="file-path validate" type="text">
+         </div>
+       </div>
+
+       @if (isset($registro->imagem))
+       <div class="input-field">
+         <img width="150" src="{{asset($post->imagem)}}">
+       </div>
+     @endif
+
+
+
+
+
                             <div class="form-group">
                                 <label>titulo</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" class="form-control" required   value="{{isset($post->titulo) ? $post->titulo : ''}}">
                             </div>
                             <div class="form-group">
                                 <label>Sub titulo</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" class="form-control" required value="{{isset($post->subtitulo) ? $post->subtitulo : ''}}">
                             </div>
                             <div class="form-group">
                                 <label>Descrição</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" class="form-control" required value="{{isset($post->subtitulo) ? $post->subtitulo : ''}}">
                             </div>
                             <div class="form-group">
                                 <label>Texto</label>
-                                <textarea class="form-control" required></textarea>
+                                <textarea class="form-control" required value="{{isset($post->texto) ? $post->texto : ''}}"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Autor</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" class="form-control" required value="{{isset($post->autor) ? $post->autor : ''}}" >
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -452,18 +486,19 @@
         <div id="deleteEmployeeModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form>
+                    <form action="{{route('posts.delete',$post->id)}}">
                         <div class="modal-header">
-                            <h4 class="modal-title">Delete Employee</h4>
+                            <h4 class="modal-title">Deletar Postagem</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <p>Are you sure you want to delete these Records?</p>
-                            <p class="text-warning"><small>This action cannot be undone.</small></p>
+                            <p>Tem certeza que deseja apagar todos os registros dessa postagem?</p>
+                            <p class="text-warning"><small>Essa ação não poderá ser desfeita.</small></p>
                         </div>
                         <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-danger" value="Delete">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                            <input type="submit"  class="btn btn-danger" value="Deletar">
+                            
                         </div>
                     </form>
                 </div>

@@ -36,28 +36,36 @@ class PostsAdmController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        $data = $request->all();
 
-        $post = $this->post;
-        $post->imageurl = $data['imageurl'];
-        $post->titulo = $data['titulo'];
-        $post->subtitulo = $data['subtitulo'];
-        $post->descricao = $data['descricao'];
-        $post->texto = $data['texto'];
-        $post->autor = $data['autor'];
-        $post->tipo = $data['tipo'];
 
-        $post->save();
-    }
-
+    public function salvar(Request $req){  //função para salvar
+        $dados = $req->all();
+          //dd($dados);    motrarar os valores que está pegando atraves do 'dados'
+  
+                   //tratando a imagem
+          if ($req->hasFile('imagem')) {
+            $imagem = $req->file('imagem');
+  
+            $num = rand(1111,2222);   //gerando um numero randomico para servir como nome da imagem no banco de dados
+            $dir = "img/postagem/";               //diretorio onde ira salvar a imagem
+            $extensao = $imagem->guessClientExtension();  //extensao da imagem
+            $nomeimagem = "imagem_".$num.".".$extensao;   //nome da imagem
+            $imagem->move($dir,$nomeimagem);     //movendo imagem para um diretorio
+            $dados['imagem'] = $dir."/".$nomeimagem;  //caminho da imagem para salvar no banco
+          }
+          Post::create($dados); //salvando tudo no banco de dados
+  
+          return redirect()->route('posts');   //redirecionando para a pagina 'Posts'
+      }
+ 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+     
     public function show($id)
     {
         //
@@ -81,9 +89,27 @@ class PostsAdmController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function atualizar(Request $request, $id)
     {
-        //
+        $registro = Post::find($id);
+
+        $dados = $request->all();
+          //dd($dados);    motrarar os valores que está pegando atraves do 'dados'
+  
+                   //tratando a imagem
+          if ($request->hasFile('imagem')) {
+            $imagem = $request->file('imagem');
+  
+            $num = rand(1111,2222);   //gerando um numero randomico para servir como nome da imagem no banco de dados
+            $dir = "img/postagem/";               //diretorio onde ira salvar a imagem
+            $extensao = $imagem->guessClientExtension();  //extensao da imagem
+            $nomeimagem = "imagem_".$num.".".$extensao;   //nome da imagem
+            $imagem->move($dir,$nomeimagem);     //movendo imagem para um diretorio
+            $dados['imagem'] = $dir."/".$nomeimagem;  //caminho da imagem para salvar no banco
+          }
+          Post::find($id)->update($dados); //salvando tudo no banco de dados
+
+          return redirect()->route('home'); 
     }
 
     /**
@@ -92,8 +118,11 @@ class PostsAdmController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        Post::find($id)->delete(); //'find': procura no banco de dados o id que foi passado
+
+        return redirect()->route('posts');
+  
     }
 }

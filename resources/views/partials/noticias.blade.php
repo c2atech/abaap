@@ -11,37 +11,37 @@
       </div>
     </div>
 
-  
-    
-     
-          <div class="row row-cols-1 row-cols-md-3">
-          @foreach ($posts as $post)
-            <div class="col mb-4">
-              <div class="card h-100">
-                <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <a class="portfolio-link" data-toggle="modal" href="#noticia1">
-                    <h5 class="card-title">
-                      {{$post->titulo}}
-                    </h5>
-                  </a>
-                  <p class="card-text">{{$post->descricao}}</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Enviado em {{$post->created_at}}</small>
-                </div>
-              </div>
-            </div>
-         
-    
-    
-    @endforeach
+
+   
+
+    <div class="row row-cols-1 row-cols-md-3">
+      @foreach ($posts as $post)
+      <div class="col mb-4">
+        <div class="card h-100">
+          <img src="{{asset($post->imagem)}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a class="portfolio-link" data-toggle="modal" href="#noticia1">
+              <h5 class="card-title">
+                {{$post->titulo}}
+              </h5>
+            </a>
+            <p class="card-text">{{$post->descricao}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Enviado em {{$post->created_at}}</small>
+          </div>
+        </div>
+      </div>
+
+
+
+      @endforeach
     </div>
 
     <div class="container justify-content-center">
       <a href="">
         {{$posts->links()}}
-
+      </a>
     </div>
 
   </div>
