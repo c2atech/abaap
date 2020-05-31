@@ -17,9 +17,10 @@ class PostsAdmController extends Controller
     
     public function index()
     {
-        $posts = $this->post->paginate(6);
+        $posts=$this->post->orderBy('id', 'DESC')->paginate(10);
         return view('admin.Posts.index', compact('posts'));
     }
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -27,7 +28,7 @@ class PostsAdmController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -36,7 +37,6 @@ class PostsAdmController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
 
     public function salvar(Request $req){  //função para salvar
         $dados = $req->all();
@@ -68,7 +68,13 @@ class PostsAdmController extends Controller
      
     public function show($id)
     {
-        //
+
+    $posts=$this->post->paginate(6);
+
+    $post = $this->post->find($id);
+
+    return view('admin.Posts.index', compact('post'));
+    
     }
 
     /**

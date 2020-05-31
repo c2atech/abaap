@@ -313,7 +313,7 @@
 
 <body>
     <div class="container sm-12 md-6">
-        <div class="table-wrapper">
+        <div class="table-wrapper container">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
@@ -325,7 +325,7 @@
                     </div>
                 </div>
             </div>
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover ">
                 <thead>
                     <tr>
 
@@ -348,14 +348,16 @@
                         <td><img height="250" src="{{asset($post->imagem)}}" alt="{{$post->titulo}}"</></td>
                         <td>{{$post->created_at}}</td>
                         <td>
-                            <i class="fas fa-trash-alt"></i>
-                        </td>
-                        <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
                     @empty
+                    <tr>
+                        <td colspan="4">
+                            <h2>Nenhum Post encontrado</h2>
+                        </td>
+                    </tr>
                     @endforelse
                 </tbody>
             </table>
@@ -476,7 +478,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-info" value="Save">
+                            <input type="submit" class="btn btn-info" value="atualizar">
                         </div>
                     </form>
                 </div>

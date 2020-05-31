@@ -9,7 +9,7 @@
                     Tópicos
                 </div>
                 <div class="card-body col-6">
-                    <a href="{{route('posts')}}">
+                    <a href="posts">
                     <button>Postagens</button>
                     </a>
                 </div>
